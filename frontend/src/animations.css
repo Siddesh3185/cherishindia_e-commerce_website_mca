@@ -1,0 +1,36 @@
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.995);
+  transition: opacity 700ms cubic-bezier(.2,.9,.3,1), transform 700ms cubic-bezier(.2,.9,.3,1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger helper */
+.reveal-stagger > * {
+  transition-delay: calc(var(--i) * 80ms);
+}
+
+/* micro interactions */
+.details-button:hover {
+  transform: translateY(-4px) scale(1.02);
+  transition: transform 220ms cubic-bezier(.2,.9,.3,1);
+}
+
+.product-card {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(21, 21, 21, 0.12);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .details-button, .product-card { transition: none !important; transform: none !important; }
+}
