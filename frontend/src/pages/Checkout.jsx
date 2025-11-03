@@ -371,17 +371,17 @@ const Checkout = () => {
                 </div>
                 <div className="summary-row">
                   <span>Tax:</span>
-                  <span>${tax.toFixed(2)}</span>
+                  <span>₹{tax.toFixed(2)}</span>
                 </div>
                 <div className="summary-row total">
                   <span>Total:</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>₹{total.toFixed(2)}</span>
                 </div>
               </div>
 
               {subtotal < 50 && (
                 <div className="shipping-notice">
-                  <p>Add ${(50 - subtotal).toFixed(2)} more for free shipping!</p>
+                  <p>Add ₹{(50 - subtotal).toFixed(2)} more for free shipping!</p>
                 </div>
               )}
             </div>

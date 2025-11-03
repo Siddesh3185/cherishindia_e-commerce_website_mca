@@ -58,7 +58,7 @@ const ProductCard = ({ product }) => {
       <div className="product-image-container">
         <Link to={`/product/${product.id}`}>
           <img 
-            src={product.image_url || '/placeholder-image.jpg'} 
+            src={product.image_url || './placeholder-image.jpg'} 
             alt={product.name}
             className="product-image"
             loading="lazy"
@@ -111,9 +111,9 @@ const ProductCard = ({ product }) => {
         
         <div className="product-footer">
           <div className="product-price">
-            ${product.price}
+            ₹{product.price}
             {hasDiscount && (
-              <span className="original-price">${product.original_price}</span>
+              <span className="original-price">₹{product.original_price}</span>
             )}
           </div>
           <button 

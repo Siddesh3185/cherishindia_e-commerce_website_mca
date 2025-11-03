@@ -86,17 +86,17 @@ const Cart = () => {
               
               <div className="summary-row">
                 <span>Items ({getCartItemsCount()}):</span>
-                <span>${getCartTotal().toFixed(2)}</span>
+                <span>₹{getCartTotal().toFixed(2)}</span>
               </div>
               
               <div className="summary-row">
                 <span>Shipping:</span>
-                <span>{getCartTotal() > 50 ? 'FREE' : '$9.99'}</span>
+                <span>{getCartTotal() > 50 ? 'FREE' : '₹9.99'}</span>
               </div>
               
               <div className="summary-row">
                 <span>Tax:</span>
-                <span>${(getCartTotal() * 0.1).toFixed(2)}</span>
+                <span>₹{(getCartTotal() * 0.1).toFixed(2)}</span>
               </div>
               
               <div className="summary-divider"></div>
@@ -104,13 +104,13 @@ const Cart = () => {
               <div className="summary-row total">
                 <span>Total:</span>
                 <span>
-                  ${(getCartTotal() + (getCartTotal() > 50 ? 0 : 9.99) + (getCartTotal() * 0.1)).toFixed(2)}
+                  ₹{(getCartTotal() + (getCartTotal() > 50 ? 0 : 9.99) + (getCartTotal() * 0.1)).toFixed(2)}
                 </span>
               </div>
 
               <div className="shipping-notice">
                 {getCartTotal() < 50 && (
-                  <p>Add ${(50 - getCartTotal()).toFixed(2)} more for free shipping!</p>
+                  <p>Add ₹{(50 - getCartTotal()).toFixed(2)} more for free shipping!</p>
                 )}
               </div>
 

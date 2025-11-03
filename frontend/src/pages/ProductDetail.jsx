@@ -104,7 +104,7 @@ const ProductDetail = () => {
           <div className="product-info-section">
             <h1 className="product-title">{product.name}</h1>
             <p className="product-category">Category: {product.category}</p>
-            <p className="product-price">${product.price}</p>
+            <p className="product-price">RS{product.price}</p>
             
             <div className="product-stock">
               {product.stock_quantity > 0 ? (
